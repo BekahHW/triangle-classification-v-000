@@ -20,13 +20,13 @@ class Triangle
     end
   end
   
-#   def validate_triangle
-#   sides = [a,b,c]
-#   false if sides.any? { |side| side <= 0 }
-#   true if sides.all? { |side| side == a }
-#   sides.inject(:+) - sides.max > sides.max ? true : false
-#   raise TriangleError if false
-# end
+  def validate_triangle
+  sides = [a,b,c]
+  false if sides.any? { |side| side <= 0 }
+  true if sides.all? { |side| side == a }
+  sides.inject(:+) - sides.max > sides.max ? true : false
+  raise TriangleError if false
+end
 
   # def validate_triangle
   #   real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
@@ -34,10 +34,6 @@ class Triangle
   #   raise TriangleError if real_triangle.include?(false)
   # end
 
-  def validate_triangle
-  a, b, c = [a, b, c].sort
-  raise TriangleError if a <= 0 or a + b <= c
-end
   
     class TriangleError < StandardError
 end
