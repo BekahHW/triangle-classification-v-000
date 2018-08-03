@@ -25,7 +25,7 @@ class Triangle
   false if sides.any? { |side| side <= 0 }
   true if sides.all? { |side| side == a }
   sides.inject(:+) - sides.max > sides.max ? true : false
-  raise TriangleError if sides.any?(false)
+  raise TriangleError if sides.include?(false)
 end
 
   # def validate_triangle
