@@ -20,7 +20,7 @@ class Triangle
     end
   end
   
-  def valid_triangle?
+  def validate_triangle
   sides = [a,b,c]
   false if sides.any? { |side| side <= 0 }
   true if sides.all? { |side| side == a }
