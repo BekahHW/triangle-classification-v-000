@@ -8,8 +8,6 @@ class Triangle
     @c = c
   end
   
-  def 
-end
 
   def kind
     validate_triangle
