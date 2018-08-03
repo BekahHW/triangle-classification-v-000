@@ -44,7 +44,7 @@ class Triangle
   class TriangleError < StandardError
 end
 
-def triangle(a, b, c)
+def kind(a, b, c)
   sides = [a,b,c].sort
 
   raise TriangleError if sides.first <= 0 || sides[2] >= sides[1] + sides[0]
